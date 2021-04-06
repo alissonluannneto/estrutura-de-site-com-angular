@@ -7,4 +7,16 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'aulaangular';
+  nome = '';
+  vetor = ['pc','desktop','celular','cadeira game'];
+  add(){
+    let n = this.nome;
+    this.vetor.push(n);
+    this.nome='';
+  }
+
+  remove(x:any){
+    this.vetor.splice(x,1)
+  }
+  
 }
